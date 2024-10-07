@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>Omega Store</title>
 </head>
 <body>
     <header>
-        <div>
-            <div><img></div>
-            <div>
+        <div class="first-area">
+            <a href=""><img class="logo" src="./images/logo_pc.webp"></a>
+            <div class="search">
                 <input type="text" placeholder="O que você está buscando?">
             </div>
-            <nav>
+            <nav class="menu">
                 <ul>
                     <li><a>Atendimento</a></li>
                     <li><a>Minha conta</a></li>
@@ -20,83 +28,210 @@
                 </ul>
             </nav>
         </div>
-        <div>
+        <div class="second-area">
             <nav>
                 <ul>
-                    <li>Inicio</li>
-                    <li>Produtos</li>
-                    <li>Contato</li>
-                    <li>Trocas e Devoluções</li>
+                    <li><a>Inicio</a></li>
+                    <li><a>Produtos</a></li>
+                    <li><a>Contato</a></li>
+                    <li><a>Trocas e Devoluções</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="">
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
-        </section>
-        <section>
-            <div>
-                <div>
-                    <svg>--ICONE--</svg>
+        <section class="banners">
+            <div class="slider-container">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./images/banner-1.webp" style="width: 100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/banner-2.webp" style="width: 100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/banner-3.webp" style="width: 100%">
+                    </div>
+                    <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlides(1)">&#10095;</a>
                 </div>
-                <div>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+            
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+        <section class="functions">
+            <div class="info-container">
+                <div class="info-icon">
+                    <img src="./images/icons/shipping.svg" style="width: 100%;">
+                </div>
+                <div class="info">
                     <h3>Envio imediato Para Todo Brasil</h3>
                     <p>Enviamos imediatamente para todo o Brasil.</p>
                 </div>
             </div>
-            <div>
-                <div>
-                    <svg>--ICONE--</svg>
+            <div class="info-container">
+                <div class="info-icon">
+                    <img src="./images/icons/payment.svg" style="width: 100%;">
                 </div>
-                <div>
+                <div class="info">
                     <h3>Parcele Suas Compras</h3>
                     <p>Parcele em até 12x ou pague no pix e ganhe 5% de desconto.</p>
                 </div>
             </div>
-            <div>
-                <div>
-                    <svg>--ICONE--</svg>
+            <div class="info-container">
+                <div class="info-icon">
+                    <img src="./images/icons/checked.svg" style="width: 100%;">
                 </div>
-                <div>
+                <div class="info">
                     <h3>Compra Segura</h3>
                     <p>Seus dados sempre protegidos.</p>
                 </div>
             </div>
-            <div>
-                <div>
-                    <svg>--ICONE--</svg>
+            <div class="info-container">
+                <div class="info-icon">
+                    <img src="./images/icons/support.svg" style="width: 100%;">
                 </div>
-                <div>
+                <div class="info">
                     <h3>Suporte</h3>
                     <p>Temos um time no WhatsApp para te dar todo suporte.</p>
                 </div>
             </div>
         </section>
-        <section>
-            <h2>Mais Vendidos</h2>
-            <div>
-                <!-- GRID PRODUTOS -->
-                <div>
-                    <img>
+        <section class="products">
+            <div class="section-title"><h1>Produtos</h1></div>
+            <div class="products-list">
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
                     <h4>Adidas Forum Low Branco e Preto</h4>
-                    <div>
-                        <p><span>R$ 297,90</span>R$199,00</p>
-                        <p>R$189,05 com PIX</p>
-                        <p>3 x de R$66,33 sem juros</p>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
                     </div>
-                    <div>
-                        <a>COMPRAR</a>
-                        <a>Espiar</a>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="./images/products/adidas-forum.webp" style="width: 100%;">
+                    <h4>Adidas Forum Low Branco e Preto</h4>
+                    <div class="product-price">
+                        <p class="price"><del>R$ 297,90</del>R$199,00</p>
+                        <p class="price-pix">R$189,05 com PIX</p>
+                        <p class="price-installment"><span>3</span> x de <span>R$66,33</span> sem juros</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-buttons">
+                        <a class="buy">COMPRAR</a>
+                        <a class="spy">Espiar</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- MARCAS -->
         <section>
             <ul>
                 <li>-</li>
@@ -107,4 +242,6 @@
     </main>
 
 </body>
+
+<script src="./js/slider.js"></script>
 </html>

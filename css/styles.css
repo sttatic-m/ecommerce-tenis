@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    color: white;
+}
+
+div.first-area {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    gap: 0.5rem;
+    width: 100%;
+    place-content: center;
+    border-bottom: 1px solid gray;
+    padding: 0.8rem 0;
+}
+
+div.first-area img.logo {
+    width: 12vw;
+    margin: 0 1.4rem;
+}
+
+div.first-area  div.search {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div.first-area div.search input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    padding: 0.6rem;
+}
+
+div.first-area nav.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+li a {
+    color: white;
+}
+
+li a:hover {
+    color: gray;
+}
+
+div.second-area {
+    width: 100%;
+    padding: 0.8rem;
+}
+
+section.banners {
+    padding: 1rem 5rem;
+}
+
+section.functions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0,0,0,.1);
+}
+
+section.functions .info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    max-width: 285px;
+    width: 100%;
+}
+
+div.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    border: 1px solid black;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+section.functions div.info h3 {
+    font-size: 1.1em;
+}
+
+section.functions div.info p {
+    font-size: 1em;
+}
+
+section.products {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+section.products div.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section.products div h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+}
+
+section.products div.products-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+section.products div.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+div.product-container h4 {
+    font-size: 0.9em;
+    font-weight: 450;
+}
+
+div.product-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+div.divider {
+    display: flex;
+    width: 95%;
+    border-bottom: 1px solid gray;
+}
+
+div.product-price p.price {
+    display: block;
+    font-weight: 750;
+}
+
+div.product-price p.price del {
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+div.product-price p.price-pix {
+    font-weight: 750;
+    font-size: 0.8em;
+}
+
+p.price-installment, p.price-pix {
+    font-size: 0.8em;
+}
+
+p.price-installment span {
+    font-weight: 750;
+}
+
+div.product-buttons {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.product-container-bg:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+div.product-container:hover div.product-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+div.product-container:hover div.divider {
+    display: none;
+}
+
+div.product-buttons a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid gray;
+    border-radius: 16px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+div.product-buttons a.buy {
+    background-color: #000;
+    color: white;
+    font-weight: 650;
+}
